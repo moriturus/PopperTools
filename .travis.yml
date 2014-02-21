@@ -1,5 +1,5 @@
 language: objective-c
 script:
-    - xctool -project PopperTools.xcodeproj -scheme PopperTools build test -sdk iossimulator
+    - xctool -project PopperTools.xcodeproj -scheme PopperTools build test -sdk iphonesimulator
     - xctool -project PopperTools.xcodeproj -scheme PopperTools_OSX build test
 

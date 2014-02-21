@@ -27,15 +27,4 @@
     [super tearDown];
 }
 
-- (void)testNSDateUTCSupport
-{
-    NSDate* nowUTC = [NSDate UTC];
-    
-    XCTAssertNil(nowUTC, @"now UTC object is nil");
-    
-    NSDate* date = [NSDate date];
-    NSDate* utc = [NSDate UTCWithDate:date];
-    
-}
-
 @end
