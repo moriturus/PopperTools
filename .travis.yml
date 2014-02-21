@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: PopperTools.xcodeproj
+xcode_scheme: PopperTools
+
