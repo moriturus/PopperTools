@@ -1,5 +1,5 @@
 //
-//  NSDate+UTC_ISO8601.m
+//  NSDate+ISO8601.m
 //  PopperTools
 //
 // Thanks for using PopperTools!
@@ -27,47 +27,18 @@
 //
 
 
-#import "NSDate+UTC_ISO8601.h"
-
-#pragma mark - UTC
-
-@implementation NSDate (UTC_ISO8601)
-
-+ (NSDate*)UTC
-{
-    return [NSDate UTCWithDate:[NSDate date]];
-}
-
-+ (NSDate*)UTCWithDate:(NSDate*)date
-{
-    
-    NSTimeZone* localTimeZone = [NSTimeZone localTimeZone];
-    NSTimeZone* utcTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
-    
-    NSInteger currentGMTOffset = [localTimeZone secondsFromGMTForDate:date];
-    NSInteger gmtOffset = [utcTimeZone secondsFromGMTForDate:date];
-    NSTimeInterval gmtInterval = (NSTimeInterval)(gmtOffset - currentGMTOffset);
-    
-    return [[NSDate alloc] initWithTimeInterval:gmtInterval sinceDate:date];
-    
-}
-
-- (NSDate*)convertToUTC
-{
-    return [NSDate UTCWithDate:self];
-}
-
-@end
+#import "NSDate+ISO8601.h"
 
 #pragma mark - ISO8601
 
 @implementation NSDate (ISO8601)
 
-- (NSString*)ISO8601String
+- (NSString*)ISO8601StringWithTimeZone:(NSTimeZone*)timeZone
 {
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
-    NSString* dateString = [formatter stringFromDate:self];
+    formatter.timeZone = timeZone;
+    NSString* dateString = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:0]];
     
     return dateString;
 }

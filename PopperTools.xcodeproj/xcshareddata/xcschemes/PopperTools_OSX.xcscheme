@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE89739318B6FB5100470CA8"
+               BlueprintIdentifier = "BED11B1718B73536002EFEA5"
                BuildableName = "libPopperTools.a"
                BlueprintName = "PopperTools_OSX"
                ReferencedContainer = "container:PopperTools.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE8973A418B6FB5200470CA8"
+               BlueprintIdentifier = "BE7BE6AA18B737C3008782C6"
                BuildableName = "PopperTools_OSXTests.xctest"
                BlueprintName = "PopperTools_OSXTests"
                ReferencedContainer = "container:PopperTools.xcodeproj">

@@ -1,5 +1,5 @@
 //
-//  NSDate+UTC_ISO8601.h
+//  NSDate+ISO8601.h
 //  PopperTools
 //
 // Thanks for using PopperTools!
@@ -29,48 +29,14 @@
 /*!
  
  @file
- NSDate+UTC_ISO8601.h
+ NSDate+ISO8601.h
  
  @brief
- UTC and ISO8601 support for NSDate
+ ISO8601 support for NSDate
  
  */
 
 #import <Foundation/Foundation.h>
-
-#pragma mark - UTC
-
-
-/**
- *  UTC support
- */
-@interface NSDate (UTC)
-
-
-/**
-*  creates and returns now UTC
-*
-*  @return now UTC
-*/
-+ (NSDate*)UTC;
-
-/**
- *  creates and returns UTC from an NSDate instance
- *
- *  @param date local date
- *
- *  @return UTC date
- */
-+ (NSDate*)UTCWithDate:(NSDate*)date;
-
-/**
- *  convert to UTC using itsself
- *
- *  @return converted UTC
- */
-- (NSDate*)convertToUTC;
-
-@end
 
 #pragma mark - ISO8601
 
@@ -87,12 +53,16 @@
  @brief
  returns ISO8601 format string
  
+ @param
+ timeZone
+ time zone
+ 
  @return
  NSString*
  ISO8601 format string
  
  */
-- (NSString*)ISO8601String;
+- (NSString*)ISO8601StringWithTimeZone:(NSTimeZone*)timeZone;
 
 /*!
  
