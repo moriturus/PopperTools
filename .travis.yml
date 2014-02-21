@@ -1,7 +1,4 @@
 language: objective-c
-before_install:
-    - brew update
-    - brew upgrade
 script:
     - xctool -project PopperTools.xcodeproj -scheme PopperTools build test -sdk iossimulator
     - xctool -project PopperTools.xcodeproj -scheme PopperTools_OSX build test
