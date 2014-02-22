@@ -181,4 +181,5 @@ stringByReplacingOccurrencesOfString:@"\\\"" withString:@"\""]
  */
 #define PTWEAKSELF __block typeof(self) __weak
 
+#endif
 
