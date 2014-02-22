@@ -174,8 +174,6 @@
     NSString* testString = @"Library";
     NSURL* url = [NSURL appLibraryDirectoryURL];
     
-    NSLog(@"%@",url);
-    
     XCTAssertTrue([testString isEqualToString:[url lastPathComponent]], @"last path component is not Library, %@",[url lastPathComponent]);
 }
 
