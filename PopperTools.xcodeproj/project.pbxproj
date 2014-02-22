@@ -33,6 +33,8 @@
 		BE7BE6B218B737C3008782C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE7BE6B018B737C3008782C6 /* InfoPlist.strings */; };
 		BE7BE6B418B737C3008782C6 /* PopperTools_OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE6B318B737C3008782C6 /* PopperTools_OSXTests.m */; };
 		BE7BE6BB18B73AD1008782C6 /* libPopperTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE423BE918B732C600238D59 /* libPopperTools.a */; };
+		BEC70D4B18B8DA77005727D3 /* libPopperTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BED11B1F18B73536002EFEA5 /* libPopperTools.a */; };
+		BEC70D4C18B8DAA4005727D3 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED11B3118B735A3002EFEA5 /* AppKit.framework */; };
 		BED11B1A18B73536002EFEA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE423BEC18B732C600238D59 /* Foundation.framework */; };
 		BED11B3218B735A3002EFEA5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED11B3118B735A3002EFEA5 /* AppKit.framework */; };
 		BED11B3418B735B2002EFEA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED11B3318B735B2002EFEA5 /* UIKit.framework */; };
@@ -140,6 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC70D4C18B8DAA4005727D3 /* AppKit.framework in Frameworks */,
+				BEC70D4B18B8DA77005727D3 /* libPopperTools.a in Frameworks */,
 				BE7BE6AC18B737C3008782C6 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,7 +638,6 @@
 				INFOPLIST_FILE = "PopperTools_OSXTests/PopperTools_OSXTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
-					"$(inherited)",
 					"-framework",
 					XCTest,
 					"-ObjC",
@@ -660,7 +663,6 @@
 				INFOPLIST_FILE = "PopperTools_OSXTests/PopperTools_OSXTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
-					"$(inherited)",
 					"-framework",
 					XCTest,
 					"-ObjC",
