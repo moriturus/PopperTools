@@ -3,6 +3,14 @@ PopperTools
 
 A tiny library that makes your programming little happy :-)
 
+CI Status
+===========
+
+| branch | status |
+|:-:|:-:|
+| master | [![Build Status](https://travis-ci.org/moriturus/PopperTools.png?branch=master)](https://travis-ci.org/moriturus/PopperTools) |
+| develop | [![Build Status](https://travis-ci.org/moriturus/PopperTools.png?branch=develop)](https://travis-ci.org/moriturus/PopperTools) |
+
 
 Lisense
 ===========
