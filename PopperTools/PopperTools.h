@@ -47,7 +47,7 @@
 #import "PTColor+HexColoring.h"
 #import "NSDate+ISO8601.h"
 #import "NSMutableArray+Randomize.h"
-#import "NSDictionary+SortedKeyEnumerator.h"
+#import "NSDictionary+SortedKeysEnumerator.h"
 #import "PTDefines.h"
 
 
