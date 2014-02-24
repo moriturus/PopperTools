@@ -29,7 +29,7 @@
 #import "NSObject+MethodSwizzling.h"
 #import <objc/runtime.h>
 
-static inline void Swizzle(Class c, SEL orig, SEL new)
+static inline void SwizzleInstanceMethod(Class c, SEL orig, SEL new)
 {
     Method origMethod = class_getInstanceMethod(c, orig);
     Method newMethod = class_getInstanceMethod(c, new);
@@ -45,11 +45,34 @@ static inline void Swizzle(Class c, SEL orig, SEL new)
     }
 }
 
+static inline void SwizzleClassMethod(Class c, SEL orig, SEL new)
+{
+    Method origMethod = class_getClassMethod(c, orig);
+    Method newMethod = class_getClassMethod(c, new);
+    
+    c = object_getClass((id)c);
+    
+    if(class_addMethod(c, orig, method_getImplementation(newMethod), method_getTypeEncoding(newMethod))) {
+        
+        class_replaceMethod(c, new, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
+        
+    } else {
+        
+        method_exchangeImplementations(origMethod, newMethod);
+        
+    }
+}
+
 @implementation NSObject (MethodSwizzling)
 
-+ (void)swizzleMethodFrom:(SEL)originalSelector to:(SEL)newSelector
++ (void)swizzleClassMethodFrom:(SEL)originalSelector to:(SEL)newSelector
 {
-    Swizzle([self class], originalSelector, newSelector);
+    SwizzleClassMethod([self class], originalSelector, newSelector);
+}
+
++ (void)swizzleInstanceMethodFrom:(SEL)originalSelector to:(SEL)newSelector
+{
+    SwizzleInstanceMethod([self class], originalSelector, newSelector);
 }
 
 @end

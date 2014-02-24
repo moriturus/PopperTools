@@ -11,6 +11,79 @@ CI Status
 | master | [![Build Status](https://travis-ci.org/moriturus/PopperTools.png?branch=master)](https://travis-ci.org/moriturus/PopperTools) |
 | develop | [![Build Status](https://travis-ci.org/moriturus/PopperTools.png?branch=develop)](https://travis-ci.org/moriturus/PopperTools) |
 
+Usage
+===========
+
+- Convert `NSDate` into ISO 8601 formatted string
+
+```
+NSTimeZone* timeZone = [NSTimeZone systemTimeZone];
+NSString* dateString = [[NSDate date] ISO8601StringWithTimeZone:timeZone];
+```
+
+- Get `NSDictionary` sorted keys enumerator
+
+```
+NSEnumerator* enumerator = [dictionary sortedKeyWithSortOption:PTSortOptionAscending];
+```
+
+- Randomize `NSMutableArray`
+
+```
+[mutableArray randomize];
+```
+
+- Method Swizzling shortcut
+
+```
+[MyClass swizzleClassMethodFrom:originalSelector to:newSelector];
+[MyClass swizzleInstanceMethodFrom:originalSelector to:newSelector];
+```
+
+- Check whether or not the object is `NSNull`
+
+```
+BOOL isNSNull = [object isNSNull];
+```
+
+- Get reference count value on ARC environment
+
+```
+CFIndex count = [object referenceCount];
+```
+
+- Get popular directories paths as `NSURL`
+
+```
+NSURL* libraryURL = [NSURL appLibraryDirectoryURL];
+
+NSURL* cachesURL = [NSURL appLibraryCacheDirectoryURL];
+
+NSURL* documentsURL [NSURL userDocumentsDirectoryURL];
+```
+
+- Get `NSColor` / `UIColor` with the RGBA hexadecimal color format
+
+```
+// "PTColor" will be replaced NSColor on OSX, UIColor on iOS 
+PTColor* color = [PTColor colorWithHex:0xffa500ff];
+
+PTColor* color = [PTColor colorWithHexString:@"c0c0c0ff"];
+```
+
+- Logging macros removing automatically at release build
+
+```
+PTLOG(@"error: %@",error);
+```
+
+- Syntax sugars for blocks expressions
+
+```
+PTBLOCK(NSObject*) weakObject = object;
+
+PTWEAKSELF weakSelf = self;
+```
 
 Lisense
 ===========

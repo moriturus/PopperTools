@@ -53,7 +53,7 @@
  arguments same as NSLog()
  
  */
-#define LOG(...) NSLog(__VA_ARGS__)
+#define PTLOG(...) NSLog(__VA_ARGS__)
 
 /*!
  
@@ -61,7 +61,7 @@
  prints line number
  
  */
-#define LINE() NSLog(@"%d",__LINE__)
+#define PTLINE() NSLog(@"%d",__LINE__)
 
 /*!
  
@@ -69,7 +69,7 @@
  prints function/method name
  
  */
-#define FUNC() NSLog(@"%s",__PRETTY_FUNCTION__)
+#define PTFUNC() NSLog(@"%s",__PRETTY_FUNCTION__)
 
 /*!
  
@@ -77,7 +77,7 @@
  prints function/method and line number
  
  */
-#define FUNCLINE() NSLog(@"%s - %d",__PRETTY_FUNCTION__,__LINE__)
+#define PTFUNCLINE() NSLog(@"%s - %d",__PRETTY_FUNCTION__,__LINE__)
 
 #else
 
@@ -91,7 +91,7 @@
  arguments same as NSLog()
  
  */
-#define LOG(...) ;
+#define PTLOG(...) ;
 
 /*!
  
@@ -99,7 +99,7 @@
  prints line number
  
  */
-#define LINE() ;
+#define PTLINE() ;
 
 /*!
  
@@ -107,7 +107,7 @@
  prints function/method name
  
  */
-#define FUNC() ;
+#define PTFUNC() ;
 
 /*!
  
@@ -115,7 +115,7 @@
  prints function/method and line number
  
  */
-#define FUNCLINE() ;
+#define PTFUNCLINE() ;
 
 #endif
 

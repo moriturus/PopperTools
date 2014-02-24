@@ -49,7 +49,7 @@
 /*!
  
  @brief
- exchange methods
+ exchange instance methods
  
  @param
  originalSelector
@@ -60,6 +60,23 @@
  new selector name
  
  */
-+ (void)swizzleMethodFrom:(SEL)originalSelector to:(SEL)newSelector;
++ (void)swizzleClassMethodFrom:(SEL)originalSelector to:(SEL)newSelector;
+
+/*!
+ 
+ @brief
+ exchange class methods
+ 
+ @param
+ originalSelector
+ original selector name
+ 
+ @param
+ newSelector
+ new selector name
+ 
+ */
++ (void)swizzleInstanceMethodFrom:(SEL)originalSelector to:(SEL)newSelector;
+
 
 @end
