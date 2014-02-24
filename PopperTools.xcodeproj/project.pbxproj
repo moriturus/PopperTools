@@ -112,7 +112,6 @@
 		BE7BE6B318B737C3008782C6 /* PopperTools_OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopperTools_OSXTests.m; sourceTree = "<group>"; };
 		BE7BE6B518B737C3008782C6 /* PopperTools_OSXTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PopperTools_OSXTests-Prefix.pch"; sourceTree = "<group>"; };
 		BED11B1F18B73536002EFEA5 /* libPopperTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPopperTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BED11B3018B73587002EFEA5 /* PopperToolsTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PopperToolsTests copy-Info.plist"; path = "/Users/henrique/dev/PopperTools/PopperToolsTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		BED11B3118B735A3002EFEA5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		BED11B3318B735B2002EFEA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -168,7 +167,6 @@
 				BE7BE6AD18B737C3008782C6 /* PopperTools_OSXTests */,
 				BE423BEB18B732C600238D59 /* Frameworks */,
 				BE423BEA18B732C600238D59 /* Products */,
-				BED11B3018B73587002EFEA5 /* PopperToolsTests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
