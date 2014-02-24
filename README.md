@@ -99,10 +99,10 @@ PTBLOCK(NSObject*) weakObject = object;
 PTWEAKSELF weakSelf = self;
 ```
 
-## Lisense
+## License
 
 
-PopperTools is lisensed under The MIT Lisense.
+PopperTools is licensed under The MIT License.
 
 Copyright (c) 2014 Henrique Sasaki Yuya
 
