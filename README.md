@@ -1,18 +1,20 @@
-PopperTools
-===========
+# PopperTools
+
 
 A tiny library that makes your programming little happy :-)
 
-CI Status
-===========
+## CI Status
+
 
 | branch | status |
 |:-:|:-:|
 | master | [![Build Status](https://travis-ci.org/moriturus/PopperTools.png?branch=master)](https://travis-ci.org/moriturus/PopperTools) |
 | develop | [![Build Status](https://travis-ci.org/moriturus/PopperTools.png?branch=develop)](https://travis-ci.org/moriturus/PopperTools) |
 
-Usage
-===========
+## Usage
+
+
+### NSDate
 
 - Convert `NSDate` into ISO 8601 formatted string
 
@@ -21,17 +23,23 @@ NSTimeZone* timeZone = [NSTimeZone systemTimeZone];
 NSString* dateString = [[NSDate date] ISO8601StringWithTimeZone:timeZone];
 ```
 
+### NSDictionary
+
 - Get `NSDictionary` sorted keys enumerator
 
 ```
 NSEnumerator* enumerator = [dictionary sortedKeyWithSortOption:PTSortOptionAscending];
 ```
 
+### NSMutableArray
+
 - Randomize `NSMutableArray`
 
 ```
 [mutableArray randomize];
 ```
+
+### NSObject
 
 - Method Swizzling shortcut
 
@@ -52,6 +60,8 @@ BOOL isNSNull = [object isNSNull];
 CFIndex count = [object referenceCount];
 ```
 
+### NSURL
+
 - Get popular directories paths as `NSURL`
 
 ```
@@ -62,6 +72,8 @@ NSURL* cachesURL = [NSURL appLibraryCacheDirectoryURL];
 NSURL* documentsURL [NSURL userDocumentsDirectoryURL];
 ```
 
+### NSColor/UIColor
+
 - Get `NSColor` / `UIColor` with the RGBA hexadecimal color format
 
 ```
@@ -70,6 +82,8 @@ PTColor* color = [PTColor colorWithHex:0xffa500ff];
 
 PTColor* color = [PTColor colorWithHexString:@"c0c0c0ff"];
 ```
+
+### Preprocessor Macros
 
 - Logging macros removing automatically at release build
 
@@ -85,8 +99,8 @@ PTBLOCK(NSObject*) weakObject = object;
 PTWEAKSELF weakSelf = self;
 ```
 
-Lisense
-===========
+## Lisense
+
 
 PopperTools is lisensed under The MIT Lisense.
 
