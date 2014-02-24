@@ -109,7 +109,7 @@
                                  @"a":@"1"
                                  };
     
-    NSEnumerator* enumerator = [dictionary sortedKeyEnumeratorWithSortOption:PTSortOptionAscending];
+    NSEnumerator* enumerator = [dictionary sortedKeysEnumeratorWithSortOption:PTSortOptionAscending];
     NSArray* keys = [enumerator allObjects];
     
     XCTAssertEqual(@"a", keys[0], @"keys[0] => %@",keys[0]);
@@ -122,7 +122,7 @@
                                  @"b":@"1"
                                  };
     
-    NSEnumerator* enumerator = [dictionary sortedKeyEnumeratorWithSortOption:PTSortOptionDescending];
+    NSEnumerator* enumerator = [dictionary sortedKeysEnumeratorWithSortOption:PTSortOptionDescending];
     NSArray* keys = [enumerator allObjects];
     
     XCTAssertEqual(@"b", keys[0], @"keys[0] => %@",keys[0]);

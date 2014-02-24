@@ -1,6 +1,6 @@
 //
 //  NSObject+MethodSwizzling.h
-//  NextScriptTesting
+//  PopperTools
 //
 // Thanks for using PopperTools!
 //

@@ -15,8 +15,8 @@
 		BE423C0918B732C600238D59 /* PopperToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE423C0818B732C600238D59 /* PopperToolsTests.m */; };
 		BE7BE69718B73679008782C6 /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE68618B73679008782C6 /* NSDate+ISO8601.m */; };
 		BE7BE69818B73679008782C6 /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE68618B73679008782C6 /* NSDate+ISO8601.m */; };
-		BE7BE69918B73679008782C6 /* NSDictionary+SortedKeyEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE68818B73679008782C6 /* NSDictionary+SortedKeyEnumerator.m */; };
-		BE7BE69A18B73679008782C6 /* NSDictionary+SortedKeyEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE68818B73679008782C6 /* NSDictionary+SortedKeyEnumerator.m */; };
+		BE7BE69918B73679008782C6 /* NSDictionary+SortedKeysEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE68818B73679008782C6 /* NSDictionary+SortedKeysEnumerator.m */; };
+		BE7BE69A18B73679008782C6 /* NSDictionary+SortedKeysEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE68818B73679008782C6 /* NSDictionary+SortedKeysEnumerator.m */; };
 		BE7BE69B18B73679008782C6 /* NSMutableArray+Randomize.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE68A18B73679008782C6 /* NSMutableArray+Randomize.m */; };
 		BE7BE69C18B73679008782C6 /* NSMutableArray+Randomize.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE68A18B73679008782C6 /* NSMutableArray+Randomize.m */; };
 		BE7BE69D18B73679008782C6 /* NSObject+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7BE68C18B73679008782C6 /* NSObject+MethodSwizzling.m */; };
@@ -90,8 +90,8 @@
 		BE423C0818B732C600238D59 /* PopperToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopperToolsTests.m; sourceTree = "<group>"; };
 		BE7BE68518B73679008782C6 /* NSDate+ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601.h"; sourceTree = "<group>"; };
 		BE7BE68618B73679008782C6 /* NSDate+ISO8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601.m"; sourceTree = "<group>"; };
-		BE7BE68718B73679008782C6 /* NSDictionary+SortedKeyEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SortedKeyEnumerator.h"; sourceTree = "<group>"; };
-		BE7BE68818B73679008782C6 /* NSDictionary+SortedKeyEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SortedKeyEnumerator.m"; sourceTree = "<group>"; };
+		BE7BE68718B73679008782C6 /* NSDictionary+SortedKeysEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SortedKeysEnumerator.h"; sourceTree = "<group>"; };
+		BE7BE68818B73679008782C6 /* NSDictionary+SortedKeysEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SortedKeysEnumerator.m"; sourceTree = "<group>"; };
 		BE7BE68918B73679008782C6 /* NSMutableArray+Randomize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Randomize.h"; sourceTree = "<group>"; };
 		BE7BE68A18B73679008782C6 /* NSMutableArray+Randomize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Randomize.m"; sourceTree = "<group>"; };
 		BE7BE68B18B73679008782C6 /* NSObject+MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzling.h"; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				BE7BE68518B73679008782C6 /* NSDate+ISO8601.h */,
-				BE7BE68718B73679008782C6 /* NSDictionary+SortedKeyEnumerator.h */,
+				BE7BE68718B73679008782C6 /* NSDictionary+SortedKeysEnumerator.h */,
 				BE7BE68918B73679008782C6 /* NSMutableArray+Randomize.h */,
 				BE7BE68B18B73679008782C6 /* NSObject+MethodSwizzling.h */,
 				BE7BE68D18B73679008782C6 /* NSObject+NSNullSupport.h */,
@@ -209,7 +209,7 @@
 				BE7BE69418B73679008782C6 /* PTColor+HexColoring.h */,
 				BE7BE69618B73679008782C6 /* PTDefines.h */,
 				BE7BE68618B73679008782C6 /* NSDate+ISO8601.m */,
-				BE7BE68818B73679008782C6 /* NSDictionary+SortedKeyEnumerator.m */,
+				BE7BE68818B73679008782C6 /* NSDictionary+SortedKeysEnumerator.m */,
 				BE7BE68A18B73679008782C6 /* NSMutableArray+Randomize.m */,
 				BE7BE68C18B73679008782C6 /* NSObject+MethodSwizzling.m */,
 				BE7BE68E18B73679008782C6 /* NSObject+NSNullSupport.m */,
@@ -402,7 +402,7 @@
 				BE7BE6A118B73679008782C6 /* NSObject+ReferenceCount.m in Sources */,
 				BE7BE69B18B73679008782C6 /* NSMutableArray+Randomize.m in Sources */,
 				BE7BE69D18B73679008782C6 /* NSObject+MethodSwizzling.m in Sources */,
-				BE7BE69918B73679008782C6 /* NSDictionary+SortedKeyEnumerator.m in Sources */,
+				BE7BE69918B73679008782C6 /* NSDictionary+SortedKeysEnumerator.m in Sources */,
 				BE7BE6A318B73679008782C6 /* NSURL+LibraryHandling.m in Sources */,
 				BE7BE69F18B73679008782C6 /* NSObject+NSNullSupport.m in Sources */,
 			);
@@ -433,7 +433,7 @@
 				BE7BE6A218B73679008782C6 /* NSObject+ReferenceCount.m in Sources */,
 				BE7BE69C18B73679008782C6 /* NSMutableArray+Randomize.m in Sources */,
 				BE7BE69E18B73679008782C6 /* NSObject+MethodSwizzling.m in Sources */,
-				BE7BE69A18B73679008782C6 /* NSDictionary+SortedKeyEnumerator.m in Sources */,
+				BE7BE69A18B73679008782C6 /* NSDictionary+SortedKeysEnumerator.m in Sources */,
 				BE7BE6A418B73679008782C6 /* NSURL+LibraryHandling.m in Sources */,
 				BE7BE6A018B73679008782C6 /* NSObject+NSNullSupport.m in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  NSDictionary+SortedKeyEnumerator.m
+//  NSDictionary+SortedKeysEnumerator.h
 //  PopperTools
 //
 // Thanks for using PopperTools!
@@ -26,21 +26,62 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "NSDictionary+SortedKeyEnumerator.h"
+/*!
+ 
+ @file
+ NSDictionary+SortedKeysEnumerator.h
+ 
+ @brief
+ sorted key enumerator support for NSDictionary
+ 
+ */
 
-@implementation NSDictionary (SortedKeyEnumerator)
+#import <Foundation/Foundation.h>
 
-- (NSEnumerator*)sortedKeyEnumeratorWithSortOption:(PTSortOptions)option
-{
-    return [[[self allKeys] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        
-        NSString* fkey = obj1;
-        NSString* skey = obj2;
-        
-        return ((option) ? -([fkey compare:skey]) : [fkey compare:skey]);
-        
-        
-    }] objectEnumerator];
-}
+/*!
+ 
+ @brief
+ options for enumerator sorting
+ 
+ */
+typedef enum {
+    
+    /*!
+     
+     @brief
+     ascending
+     
+     */
+    PTSortOptionAscending = 0x0,
+    
+    /*!
+     
+     @brief
+     descending
+     
+     */
+    PTSortOptionDescending = 0x1,
+    
+} PTSortOptions;
+
+/*!
+ 
+ @brief
+ sorted key enumerator support for NSDictionary
+ 
+ */
+@interface NSDictionary (SortedKeysEnumerator)
+
+/*!
+ 
+ @brief
+ returns sorted key enumerator
+ 
+ @param
+ option
+ ascending or descending
+ 
+ */
+- (NSEnumerator*)sortedKeysEnumeratorWithSortOption:(PTSortOptions)option;
 
 @end
