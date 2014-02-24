@@ -21,16 +21,39 @@
     
     if (self) {
         
-        [[self class] swizzleMethodFrom:@selector(description) to:@selector(sayHello)];
+        [[self class] swizzleInstanceMethodFrom:@selector(description) to:@selector(sayHello)];
         
     }
     
     return self;
 }
 
++ (NSString*)originalClassMethod
+{
+    return @"bonjour";
+}
+
 - (NSString*)sayHello
 {
     return @"hello";
+}
+
+@end
+
+@interface PTSwizzleSubClass : PTSwizzleClass
+
+@end
+
+@implementation PTSwizzleSubClass
+
++ (void)swizzle
+{
+    [[self class] swizzleClassMethodFrom:@selector(originalClassMethod) to:@selector(swizzleClassMethod)];
+}
+
++ (NSString*)swizzleClassMethod
+{
+    return @"buongiorno";
 }
 
 @end
@@ -131,7 +154,15 @@
     XCTAssertThrows([array randomizeWithCount:6], @"%s failed",__PRETTY_FUNCTION__);
 }
 
-- (void)testNSObject_swizzleMethodFrom_to
+- (void)testNSObject_swizzleClassMethodFrom_to
+{
+    NSString* italien = @"buongiorno";
+    [PTSwizzleSubClass swizzle];
+    
+    XCTAssertEqual(italien, [PTSwizzleSubClass originalClassMethod], @"%@ != %@",italien,[PTSwizzleSubClass originalClassMethod]);
+}
+
+- (void)testNSObject_swizzleInstanceMethodFrom_to
 {
     NSString* testString = @"hello";
     PTSwizzleClass* testClass = [[PTSwizzleClass alloc] init];
