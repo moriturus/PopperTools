@@ -28,7 +28,7 @@ NSString* dateString = [[NSDate date] ISO8601StringWithTimeZone:timeZone];
 - Get `NSDictionary` sorted keys enumerator
 
 ```
-NSEnumerator* enumerator = [dictionary sortedKeyWithSortOption:PTSortOptionAscending];
+NSEnumerator* enumerator = [dictionary sortedKeysEnumeratorWithSortOption:PTSortOptionAscending];
 ```
 
 ### NSMutableArray

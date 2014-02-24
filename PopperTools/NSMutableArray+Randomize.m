@@ -45,7 +45,7 @@
         
         while (--maxCount) {
             
-            NSUInteger i = (NSUInteger)(arc4random() % count);
+            NSUInteger i = (NSUInteger)(arc4random_uniform((u_int32_t)count));
             [self exchangeObjectAtIndex:maxCount withObjectAtIndex:i];
             
         }
