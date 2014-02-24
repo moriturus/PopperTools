@@ -38,7 +38,7 @@
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
     formatter.timeZone = timeZone;
-    NSString* dateString = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:0]];
+    NSString* dateString = [formatter stringFromDate:self];
     
     return dateString;
 }
